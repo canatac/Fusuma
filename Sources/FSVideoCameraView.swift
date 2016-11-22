@@ -127,7 +127,11 @@ final class FSVideoCameraView: UIView {
             shotButton.setImage(videoStartImage, for: UIControlState())
         }
         
-        flashConfiguration()
+        if (DeviceType.IS_IPAD || DeviceType.IS_IPAD_PRO) {
+            print("VIDEO : IS_IPAD : NO FLASH CONFIGURATION")
+        }else{
+            flashConfiguration()
+        }
         
         self.startCamera()
     }
