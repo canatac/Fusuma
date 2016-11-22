@@ -40,6 +40,7 @@ struct DeviceType
 }
 
 final class FSCameraView: UIView, UIGestureRecognizerDelegate {
+    @IBOutlet var typePicker: UIPickerView!
 
     @IBOutlet weak var previewViewContainer: UIView!
     @IBOutlet weak var shotButton: UIButton!
