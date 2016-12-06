@@ -39,7 +39,10 @@ struct DeviceType
     func cameraShotFinished(_ image: UIImage)
 }
 
-final class FSCameraView: UIView, UIGestureRecognizerDelegate {
+final class FSCameraView: UIView, UIGestureRecognizerDelegate,UIPickerViewDelegate, UIPickerViewDataSource {
+    //@available(iOS 2.0, *)
+
+
     @IBOutlet var typePicker: UIPickerView!
 
     @IBOutlet weak var previewViewContainer: UIView!
@@ -59,6 +62,13 @@ final class FSCameraView: UIView, UIGestureRecognizerDelegate {
 
     var flashOffImage: UIImage?
     var flashOnImage: UIImage?
+    
+    // NEW CUSTOM PICKERVIEW
+    var label:DocumentPickerRowView     =   DocumentPickerRowView()
+    var pickerData:[String]             =   [String]()
+    var rowHeight:CGFloat               =   0.0
+    var selectedType:String             =   ""
+
     
     static func instance() -> FSCameraView {
         
@@ -153,6 +163,15 @@ final class FSCameraView: UIView, UIGestureRecognizerDelegate {
         }else{
             flashConfiguration()
         }
+        
+        
+        pickerData = ["RIB", "CNI", "Bulletin de salaire"]
+        self.typePicker.dataSource  =   self
+        self.typePicker.delegate    =   self
+        
+        rowHeight = label.rowTitle.font.pointSize
+        print(rowHeight)
+        //self.typePicker.setNeedsLayout()
         
         self.startCamera()
         
@@ -443,5 +462,28 @@ extension FSCameraView {
         }
 
         return false
+    }
+    
+    func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
+        return pickerData.count
+    }
+    
+    func pickerView(_ pickerView: UIPickerView, viewForRow row: Int, forComponent component: Int, reusing view: UIView?) -> UIView {
+        label                           =   self.typePicker.view(forRow: row, forComponent: component)! as! DocumentPickerRowView
+        label.rowTitle.text             =   pickerData[row]
+        
+        return label
+    }
+    
+    func pickerView(_ pickerView: UIPickerView, rowHeightForComponent component: Int) -> CGFloat {
+        return rowHeight
+    }
+    
+    func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
+        selectedType                    =   pickerData[row]
+    }
+    
+    public func numberOfComponents(in pickerView: UIPickerView) -> Int {
+        return 1
     }
 }

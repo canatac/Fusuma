@@ -8,6 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		52412A971CA6114A0073C4BE /* Fusuma.h in Headers */ = {isa = PBXBuildFile; fileRef = 52412A961CA6114A0073C4BE /* Fusuma.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		8C970A0A1DE4A3260088326C /* DocumentPickerView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8C970A071DE4A3260088326C /* DocumentPickerView.xib */; };
+		8C970A0B1DE4A3260088326C /* DocumentPickerRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C970A081DE4A3260088326C /* DocumentPickerRowView.swift */; };
+		8C970A0C1DE4A3260088326C /* MyPickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C970A091DE4A3260088326C /* MyPickerView.swift */; };
+		8CD7D77C1DF70BBB00453C6F /* Localizator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CD7D77B1DF70BBB00453C6F /* Localizator.swift */; };
 		EDDC0B3E1D04F53E009135DB /* FSVideoCameraView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDDC0B3C1D04F53E009135DB /* FSVideoCameraView.swift */; };
 		EDDC0B3F1D04F53E009135DB /* FSVideoCameraView.xib in Resources */ = {isa = PBXBuildFile; fileRef = EDDC0B3D1D04F53E009135DB /* FSVideoCameraView.xib */; };
 		EDDC0B4A1D0511E7009135DB /* FusumaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDDC0B481D0511E7009135DB /* FusumaViewController.swift */; };
@@ -27,6 +31,10 @@
 		52412A931CA6114A0073C4BE /* Fusuma.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Fusuma.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		52412A961CA6114A0073C4BE /* Fusuma.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Fusuma.h; sourceTree = "<group>"; };
 		52412A981CA6114A0073C4BE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8C970A071DE4A3260088326C /* DocumentPickerView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DocumentPickerView.xib; sourceTree = "<group>"; };
+		8C970A081DE4A3260088326C /* DocumentPickerRowView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DocumentPickerRowView.swift; sourceTree = "<group>"; };
+		8C970A091DE4A3260088326C /* MyPickerView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyPickerView.swift; sourceTree = "<group>"; };
+		8CD7D77B1DF70BBB00453C6F /* Localizator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Localizator.swift; sourceTree = "<group>"; };
 		EDDC0B3C1D04F53E009135DB /* FSVideoCameraView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FSVideoCameraView.swift; sourceTree = "<group>"; };
 		EDDC0B3D1D04F53E009135DB /* FSVideoCameraView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FSVideoCameraView.xib; sourceTree = "<group>"; };
 		EDDC0B481D0511E7009135DB /* FusumaViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; indentWidth = 4; lastKnownFileType = sourcecode.swift; path = FusumaViewController.swift; sourceTree = "<group>"; tabWidth = 4; };
@@ -84,6 +92,10 @@
 		52412A9E1CA6114F0073C4BE /* Sources */ = {
 			isa = PBXGroup;
 			children = (
+				8CD7D77B1DF70BBB00453C6F /* Localizator.swift */,
+				8C970A071DE4A3260088326C /* DocumentPickerView.xib */,
+				8C970A081DE4A3260088326C /* DocumentPickerRowView.swift */,
+				8C970A091DE4A3260088326C /* MyPickerView.swift */,
 				EDDC0B5C1D051245009135DB /* Assets.xcassets */,
 				EDDC0B481D0511E7009135DB /* FusumaViewController.swift */,
 				EDDC0B491D0511E7009135DB /* FusumaViewController.xib */,
@@ -172,6 +184,7 @@
 			files = (
 				EDDC0B3F1D04F53E009135DB /* FSVideoCameraView.xib in Resources */,
 				EDDC0B571D0511F2009135DB /* FSAlbumViewCell.xib in Resources */,
+				8C970A0A1DE4A3260088326C /* DocumentPickerView.xib in Resources */,
 				EDDC0B591D0511F2009135DB /* FSCameraView.xib in Resources */,
 				EDDC0B551D0511F2009135DB /* FSAlbumView.xib in Resources */,
 				EDDC0B5D1D051245009135DB /* Assets.xcassets in Resources */,
@@ -190,8 +203,11 @@
 				EDDC0B581D0511F2009135DB /* FSCameraView.swift in Sources */,
 				EDDC0B4A1D0511E7009135DB /* FusumaViewController.swift in Sources */,
 				EDDC0B541D0511F2009135DB /* FSAlbumView.swift in Sources */,
+				8CD7D77C1DF70BBB00453C6F /* Localizator.swift in Sources */,
+				8C970A0C1DE4A3260088326C /* MyPickerView.swift in Sources */,
 				EDDC0B5A1D0511F2009135DB /* FSConstants.swift in Sources */,
 				EDDC0B5B1D0511F2009135DB /* FSImageCropView.swift in Sources */,
+				8C970A0B1DE4A3260088326C /* DocumentPickerRowView.swift in Sources */,
 				EDDC0B561D0511F2009135DB /* FSAlbumViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
